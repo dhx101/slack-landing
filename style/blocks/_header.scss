@@ -1,14 +1,14 @@
 .header {
     background-color: $primary_color;
     font-family: $montserrat_font;
-    font-size: 1.5rem;
     font-weight: 700;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding: 1rem 10%;
+    padding: 1rem 10vw;
     color: $white_color;
+
     &-nav {
         display: flex;
         justify-content: space-evenly;
@@ -33,21 +33,44 @@
                 a {
                     color: $white_color;
                     text-decoration: none;
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                    
                 }
             }
         }
     }
-    &-singed-out {
+    &-signed-out {
         display: flex;
-        gap: 25px;
+        gap: 20px;
         justify-content: space-between;
         align-items: center;
         a {
             color: $white_color;
             text-decoration: none;
-        }
+            &.button--empty {
+                box-shadow:0px 0px 0px 1px $white_color;
+                padding: 12px 16px;
+                border-radius: 5px;
+                transition: 400ms;
+                &:hover {
+                    box-shadow: 0px 0px 0px 2px $white_color;
+                    transition: 400ms;
+                }
+            }
+            &.button--full {
+                box-shadow:0px 0px 0px 1px $white_color;
+                padding: 12px 16px;
+                color: $primary_color;
+                background-color: $white_color;
+                border-radius: 5px;
+                transition: 400ms ;
+                &:hover {
+                    box-shadow: 0px 0px 0px 2px $white_color;;
+                    transition: 400mss ;
+                }
+            }
+        }   
+    }
+    .link--unique:hover {
+        text-decoration: underline;
     }
 }
