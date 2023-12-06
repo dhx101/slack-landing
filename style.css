@@ -68,6 +68,8 @@ table {
   height: 80px;
   padding: 1rem 10vw;
   color: #FFFFFF;
+  position: sticky;
+  top: 0;
 }
 .header a {
   height: inherit;
@@ -152,23 +154,26 @@ table {
   }
 }
 
-.main {
+main {
+  background-color: #F4EDE4;
+  font-family: "Montserrat", sans-serif;
+}
+main .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
   gap: 25px;
   background-color: #541554;
   color: #FFFFFF;
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
-  .main {
+  main .main {
     flex-direction: row;
   }
 }
-.main-login {
+main .main-login {
   padding: 5vh 10vw;
   display: flex;
   align-items: flex-start;
@@ -177,15 +182,15 @@ table {
   align-items: center;
   gap: 25px;
 }
-.main-login h1 {
+main .main-login h1 {
   font-size: 3rem;
   font-weight: 700;
 }
-.main-login h1 span {
+main .main-login h1 span {
   color: orangered;
   font-size: inherit;
 }
-.main-login .button--white {
+main .main-login .button--white {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -196,11 +201,11 @@ table {
   transition: 400ms;
   background-color: white;
 }
-.main-login .button--white:hover {
+main .main-login .button--white:hover {
   box-shadow: 0px 0px 0px 2px #FFFFFF;
   transition: 400ms;
 }
-.main-login .button--white a {
+main .main-login .button--white a {
   width: 100%;
   height: 100%;
   color: #541554;
@@ -208,7 +213,7 @@ table {
   font-weight: 700;
   text-decoration: none;
 }
-.main-login .button--google {
+main .main-login .button--google {
   width: 100%;
   height: 60px;
   display: flex;
@@ -219,18 +224,18 @@ table {
   color: #FFFFFF;
   font-weight: 700;
 }
-.main-login .button--google:hover {
+main .main-login .button--google:hover {
   box-shadow: 0px 0px 0px 2px #FFFFFF;
   transition: 400ms;
 }
-.main-login .button--google img {
+main .main-login .button--google img {
   height: 80%;
   padding: 10px;
   background-color: white;
   border-radius: 3px;
   margin: 5px;
 }
-.main-login .button--google a {
+main .main-login .button--google a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,17 +245,17 @@ table {
   font-weight: 700;
   text-decoration: none;
 }
-.main-login p {
+main .main-login p {
   font-weight: 400;
   font-size: 1.2rem;
 }
-.main-video video {
+main .main-video video {
   width: 100%;
   min-width: 500px;
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
-  .main-video video {
+  main .main-video video {
     width: 50vw;
     min-width: 780px;
     height: 100%;
@@ -265,4 +270,123 @@ table {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   gap: 25px;
+  height: 100%;
+  padding: 5vh 10vw;
+}
+.companies__h2 {
+  padding-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.companies-list {
+  height: 160px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.companies-list__item {
+  height: 80px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.companies-list__item img {
+  height: 100%;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+}
+.video-area {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 25px;
+  padding: 5vh 0;
+}
+@media only screen and (min-width: 992px) {
+  .video-area {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+.video-area__video--left {
+  justify-self: flex-start;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .video-area__video--left {
+    display: flex;
+    width: 75vw;
+    max-width: 625px;
+    height: 100%;
+    padding-right: 5vw;
+  }
+}
+.video-area__video--right {
+  justify-self: flex-end;
+  display: none;
+}
+@media only screen and (min-width: 980px) {
+  .video-area__video--right {
+    order: 2;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .video-area__video--right {
+    display: flex;
+    width: 75vw;
+    max-width: 625px;
+    height: 100%;
+    padding-right: 5vw;
+  }
+}
+.video-area__img--left {
+  display: block;
+  width: 400px;
+  justify-self: flex-start;
+}
+@media only screen and (min-width: 768px) {
+  .video-area__img--left {
+    display: none;
+  }
+}
+.video-area__img--right {
+  display: block;
+  width: 400px;
+  justify-self: flex-end;
+}
+@media only screen and (min-width: 768px) {
+  .video-area__img--right {
+    display: none;
+  }
+}
+.video-area__text {
+  padding: 25px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+}
+.video-area__text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.video-area__text p {
+  font-size: 1.25rem;
+}
+.video-area__text a {
+  text-decoration: none;
+}
+.video-area__text a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

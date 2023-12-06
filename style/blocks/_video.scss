@@ -1,0 +1,86 @@
+.video {
+	display: flex;
+	flex-direction: column; 
+	&-area {
+		display: grid;
+		grid-auto-flow: dense;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		align-items: center;
+		gap: 25px;
+		padding: 5vh 0;
+		@media only screen and (min-width: 992px) {
+			grid-template-columns: repeat(2 , 1fr);
+			justify-items: center;
+		}
+		
+		&__video--left {
+			justify-self: flex-start;
+			display: none;
+			
+			@media only screen and (min-width: 768px) {
+				display: flex;
+				width: 75vw;
+				max-width: 625px;
+				height: 100%;
+				padding-right: 5vw;;
+			}
+		}
+		&__video--right {
+			justify-self: flex-end;
+			display: none;
+			@media only screen and (min-width: 980px) {
+				order: 2;
+			}
+			@media only screen and (min-width: 768px) {
+				display: flex;
+				width: 75vw;
+				max-width: 625px;
+				height: 100%;
+				padding-right: 5vw;;
+			}
+		}
+		&__img--left {
+			display: block;
+			width: 400px;
+			justify-self: flex-start;
+			@media only screen and (min-width: 768px) {
+				display: none;
+			}
+		}
+		&__img--right {
+			
+			display: block;
+			width: 400px;
+			justify-self: flex-end;
+			@media only screen and (min-width: 768px) {
+				display: none;
+			}
+		}
+		&__text {
+			padding: 25px;
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 25px;
+			h3 {
+				font-size: 2rem;
+				font-weight: 700;
+			}
+			p {
+				font-size: 1.25rem;
+			}
+			a {
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+	}
+
+
+}

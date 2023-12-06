@@ -8,6 +8,8 @@
     height: 80px;
     padding: 1rem 10vw;
     color: $white_color;
+    position:sticky;
+    top: 0;
     a {
         height: inherit;
         display: flex;
