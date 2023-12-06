@@ -1,0 +1,9 @@
+.companies {
+    background-color: $secondary_color;
+    display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	font-family: $montserrat_font;
+	gap: 25px;
+}

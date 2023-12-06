@@ -1,43 +1,104 @@
 .main {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	font-family: $montserrat_font;
-	padding: 5vh 10vw;
 	gap: 25px;
 	background-color: $primary_color;
 	color: $white_color;
-	@media only screen and (max-width: 768px) {
+	overflow: hidden;
+	@media only screen and (min-width: 768px) {
+		flex-direction: row;
 	}
 	&-login {
+		padding: 5vh 10vw;
 		display: flex;
+		align-items: flex-start;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-        gap: 25px;
+		gap: 25px;
 		h1 {
 			font-size: 3rem;
 			font-weight: 700;
 
 			span {
 				color: orangered;
-                font-size: inherit;
+				font-size: inherit;
 			}
 		}
-		a {
-			width: 50px;
-			img {
+
+		.button--white {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0px 0px 0px 1px $white_color;
+			padding: 20px 16px;
+			border-radius: 3px;
+			transition: 400ms;
+			background-color: white;
+			&:hover {
+				box-shadow: 0px 0px 0px 2px $white_color;
+				transition: 400ms;
+			}
+			a {
 				width: 100%;
+				height: 100%;
+				color: $primary_color;
+				text-align: center;
+				font-weight: 700;
+				text-decoration: none;
+			}
+		}
+		.button--google {
+			width: 100%;
+			height: 60px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: #4285f4;
+			border-radius: 3px;
+			color: $white_color;
+			font-weight: 700;
+			&:hover {
+				box-shadow: 0px 0px 0px 2px $white_color;
+				transition: 400ms;
+			}
+			img {
+				height: 80%;
+				padding: 10px;
+				background-color: white;
+				border-radius: 3px;
+				margin: 5px;
+			}
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				color: $white_color;
+				font-weight: 700;
+				text-decoration: none;
 			}
 		}
 		p {
-            font-weight: 400;
-            font-size: 1.2rem;
+			font-weight: 400;
+			font-size: 1.2rem;
 		}
 	}
 	&-video {
 		video {
 			width: 100%;
+			min-width: 500px;
+			overflow: hidden;
+			@media only screen and (min-width: 768px) {
+				width: 50vw;
+				min-width: 780px;
+				height: 100%;
+			}
 		}
 	}
 }
