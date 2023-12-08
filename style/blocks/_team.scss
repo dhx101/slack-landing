@@ -1,0 +1,142 @@
+.team {
+	background-color: white;
+	padding: 5vh 0;
+	font-family: $montserrat_font;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	box-sizing: border-box;
+	&-title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+		padding: 0 10vw;
+		h3 {
+			font-weight: 700;
+			font-size: 2rem;
+			text-align: center;
+			@media only screen and (min-width: (1024px)) {
+				font-size: 3rem;
+			}
+		}
+		p {
+			font-weight: 500;
+			font-size: 1.1rem;
+			text-align: center;
+		}
+	}
+	&-button {
+		display: block;
+		gap: 25px;
+		text-transform: uppercase;
+		padding: 5vh 10vw;
+		@media only screen and (min-width: 1024px) {
+			display: inline-block;
+		}
+		&--full {
+			width: 100%;
+			box-shadow: 0px 0px 0px 1px $white_color;
+			padding: 20px 16px;
+			border-radius: 3px;
+			transition: 400ms;
+			background-color: $primary_color;
+			text-align: center;
+			font-weight: 700;
+			text-decoration: 0;
+			color: $white_color;
+			&:hover {
+				background-color: #4a154b;
+				transition: 400ms;
+			}
+		}
+		&--white {
+			width: 100%;
+			box-shadow: 0px 0px 0px 1px $primary_color;
+			padding: 20px 16px;
+			border-radius: 3px;
+			transition: 400ms;
+			background-color: white;
+			text-align: center;
+			font-weight: 700;
+			text-decoration: none;
+			&:hover {
+				box-shadow: 0px 0px 0px 2px $primary_color;
+				transition: 400ms;
+			}
+		}
+	}
+	&-percentages {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+		padding: 5vh 10vw;
+		@media only screen and (min-width: 1024px) {
+			flex-direction: row;
+		}
+		p {
+			display: flex;
+			flex-direction: column;
+			font-size: 0.9rem;
+			font-weight: 500;
+			gap: 20px;
+			align-items: center;
+
+			span {
+				font-size: 3rem;
+				font-weight: 700;
+				color: $primary_color;
+				@media only screen and (min-width: 768px) {
+					font-size: 4rem;
+				}
+			}
+		}
+	}
+	&-video {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		@media only screen and (min-width: 768px) {
+			flex-direction: row;
+		}
+		video {
+			width: 90vw;
+			clip-path: inset(25px 0 25px 0 round 0 500px 500px 0);
+			@media only screen and (min-width: 768px) {
+				width: 50vw;
+			}
+		}
+		&-quote {
+			display: flex;
+			flex-direction: column;
+			padding: 5vh 5vw;
+			&__quote {
+				font-size: 1.2rem;
+				font-weight: 500;
+				margin-bottom: 15px;
+			}
+			&__person {
+				font-size: 0.9rem;
+				font-weight: 700;
+			}
+			&__charge {
+				font-size: 0.9rem;
+				font-weight: 700;
+				margin-bottom: 15px;
+			}
+
+		}
+	}
+
+	&-small {
+		padding: 0 10vw;
+		font-size: 0.9rem;
+		font-weight: 400;
+		color: #696969;
+	}
+}

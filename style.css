@@ -324,10 +324,9 @@ main .main-video video {
 @media only screen and (min-width: 768px) {
   .video-area__video--left {
     display: flex;
-    width: 75vw;
+    width: 60vw;
     max-width: 625px;
     height: 100%;
-    padding-right: 5vw;
   }
 }
 .video-area__video--right {
@@ -342,10 +341,9 @@ main .main-video video {
 @media only screen and (min-width: 768px) {
   .video-area__video--right {
     display: flex;
-    width: 75vw;
+    width: 60vw;
     max-width: 625px;
     height: 100%;
-    padding-right: 5vw;
   }
 }
 .video-area__img--left {
@@ -389,4 +387,158 @@ main .main-video video {
 }
 .video-area__text a:hover {
   text-decoration: underline;
+}
+
+.team {
+  background-color: white;
+  padding: 5vh 0;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  box-sizing: border-box;
+}
+.team-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0 10vw;
+}
+.team-title h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  .team-title h3 {
+    font-size: 3rem;
+  }
+}
+.team-title p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.team-button {
+  display: block;
+  gap: 25px;
+  text-transform: uppercase;
+  padding: 5vh 10vw;
+}
+@media only screen and (min-width: 1024px) {
+  .team-button {
+    display: inline-block;
+  }
+}
+.team-button--full {
+  width: 100%;
+  box-shadow: 0px 0px 0px 1px #FFFFFF;
+  padding: 20px 16px;
+  border-radius: 3px;
+  transition: 400ms;
+  background-color: #541554;
+  text-align: center;
+  font-weight: 700;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+  color: #FFFFFF;
+}
+.team-button--full:hover {
+  background-color: #4a154b;
+  transition: 400ms;
+}
+.team-button--white {
+  width: 100%;
+  box-shadow: 0px 0px 0px 1px #541554;
+  padding: 20px 16px;
+  border-radius: 3px;
+  transition: 400ms;
+  background-color: white;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+}
+.team-button--white:hover {
+  box-shadow: 0px 0px 0px 2px #541554;
+  transition: 400ms;
+}
+.team-percentages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 5vh 10vw;
+}
+@media only screen and (min-width: 1024px) {
+  .team-percentages {
+    flex-direction: row;
+  }
+}
+.team-percentages p {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 500;
+  gap: 20px;
+  align-items: center;
+}
+.team-percentages p span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #541554;
+}
+@media only screen and (min-width: 768px) {
+  .team-percentages p span {
+    font-size: 4rem;
+  }
+}
+.team-video {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .team-video {
+    flex-direction: row;
+  }
+}
+.team-video video {
+  width: 90vw;
+  -webkit-clip-path: inset(25px 0 25px 0 round 0 500px 500px 0);
+          clip-path: inset(25px 0 25px 0 round 0 500px 500px 0);
+}
+@media only screen and (min-width: 768px) {
+  .team-video video {
+    width: 50vw;
+  }
+}
+.team-video-quote {
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 5vw;
+}
+.team-video-quote__quote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.team-video-quote__person {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.team-video-quote__charge {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.team-small {
+  padding: 0 10vw;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #696969;
 }/*# sourceMappingURL=style.css.map */
