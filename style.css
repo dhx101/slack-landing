@@ -310,13 +310,18 @@ main .main-video video {
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  gap: 25px;
+  gap: 50px;
   padding: 5vh 0;
 }
 @media only screen and (min-width: 992px) {
   .video-area {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .video-area {
+    padding: 5vh 10vw;
   }
 }
 .video-area__video--left {
@@ -426,12 +431,13 @@ main .main-video video {
   text-align: center;
 }
 .team-button {
-  display: block;
+  display: flex;
+  flex-direction: column;
   gap: 25px;
   text-transform: uppercase;
   padding: 5vh 10vw;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .team-button {
     display: inline-block;
   }
@@ -476,7 +482,7 @@ main .main-video video {
   gap: 25px;
   padding: 5vh 10vw;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .team-percentages {
     flex-direction: row;
   }
@@ -509,7 +515,13 @@ main .main-video video {
     flex-direction: row;
   }
 }
-.team-video video {
+.team-video a {
+  position: relative;
+}
+.team-video a:hover .blue-block {
+  background-color: rgb(0, 60, 138);
+}
+.team-video a video {
   width: 90vw;
   -webkit-clip-path: inset(25px 0 25px 0 round 0 500px 500px 0);
           clip-path: inset(25px 0 25px 0 round 0 500px 500px 0);
@@ -517,9 +529,30 @@ main .main-video video {
   z-index: 1;
 }
 @media only screen and (min-width: 1024px) {
-  .team-video video {
+  .team-video a video {
     width: 50vw;
   }
+}
+.team-video a .blue-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 50px;
+  background-color: rgb(0, 110, 255);
+  position: absolute;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.team-video a .blue-block .triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 0 10px 17.3px;
+  border-color: transparent transparent transparent #ffffff;
+  transform: rotate(0deg);
 }
 .team-video-quote {
   display: flex;
@@ -746,8 +779,83 @@ main .main-video video {
   }
 }
 .footer-links__list__item a {
-  font-size: 0.8;
+  font-size: 0.8rem;
   font-weight: 500;
-  color: black;
+  color: rgb(70, 70, 70);
   text-decoration: none;
+}
+.footer-extra {
+  padding: 5vh 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.footer-extra-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 5vh 0;
+  border-top: 1px solid grey;
+}
+@media only screen and (min-width: 1250px) {
+  .footer-extra-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.footer-extra-links .privacidad::before {
+  content: "✓";
+}
+.footer-extra-links .language::after {
+  content: url(https://fontawesome.com/icons/globe?f=classic&s=solid);
+}
+.footer-extra-links .links-terms__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 18px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-extra-links .links-terms__list {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.footer-extra-links .links-terms__list a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.footer-extra-links .link-rrss__list {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  .footer-extra-links .link-rrss__list {
+    justify-content: flex-start;
+    gap: 15px;
+  }
+}
+.footer-extra-links .link-rrss__list a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.footer-extra-links .link-rrss__list a img {
+  width: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-extra-links .link-rrss__list a img {
+    width: 16px;
+  }
+}
+.footer-extra-links a {
+  color: blue;
+  text-decoration: none;
+}
+.footer-extra p {
+  font-size: 0.7rem;
 }/*# sourceMappingURL=style.css.map */

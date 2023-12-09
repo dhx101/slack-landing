@@ -7,11 +7,14 @@
 		grid-template-columns: 1fr;
 		justify-items: center;
 		align-items: center;
-		gap: 25px;
+		gap: 50px;
 		padding: 5vh 0;
 		@media only screen and (min-width: 992px) {
 			grid-template-columns: repeat(2 , 1fr);
 			justify-items: center;
+		}
+		@media only screen and (min-width: 1200px) {
+			padding: 5vh 10vw;
 		}
 		
 		&__video--left {
