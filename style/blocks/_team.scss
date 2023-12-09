@@ -101,19 +101,22 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		@media only screen and (min-width: 768px) {
+		@media only screen and (min-width: 1024px) {
 			flex-direction: row;
 		}
 		video {
 			width: 90vw;
 			clip-path: inset(25px 0 25px 0 round 0 500px 500px 0);
-			@media only screen and (min-width: 768px) {
+			overflow: hidden;
+			z-index: 1;
+			@media only screen and (min-width: 1024px) {
 				width: 50vw;
 			}
 		}
 		&-quote {
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
 			padding: 5vh 5vw;
 			&__quote {
 				font-size: 1.2rem;
@@ -128,6 +131,10 @@
 				font-size: 0.9rem;
 				font-weight: 700;
 				margin-bottom: 15px;
+			}
+			a {
+				text-decoration: none;
+				color: $primary_color;
 			}
 
 		}

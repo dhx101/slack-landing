@@ -1,0 +1,101 @@
+.footer {
+	background-color: white;
+	font-family: $montserrat_font;
+	display: grid;
+	align-items: center;
+
+	&-cta {
+		background-color: $primary_color;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		padding: 10vh 10vw;
+		clip-path: ellipse(105% 100% at center top);
+		h4 {
+			font-size: 2.2rem;
+			font-weight: 700;
+			text-align: center;
+			color: white;
+		}
+		&__button {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+
+			a {
+				font-size: 1rem;
+				font-weight: 500;
+				text-decoration: none;
+				text-align: center;
+			}
+			&--white {
+				box-shadow: 0px 0px 0px 1px $white_color;
+				padding: 20px 16px;
+				border-radius: 3px;
+				transition: 400ms;
+				background-color: white;
+				&:hover {
+					box-shadow: 0px 0px 0px 2px $white_color;
+					transition: 400mss;
+				}
+			}
+			&--empty {
+				box-shadow: 0px 0px 0px 1px $white_color;
+				padding: 20px 16px;
+				border-radius: 3px;
+				transition: 400ms;
+				color: white;
+				&:hover {
+					box-shadow: 0px 0px 0px 2px $white_color;
+					transition: 400ms;
+				}
+			}
+		}
+	}
+	&-links {
+        display: flex;
+            flex-direction: column;
+		
+		gap: 35px;
+		padding: 5vh 10vw;
+        @media only screen and (min-width: 480px) {
+            display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: auto;
+        }
+		@media only screen and (min-width: 1024px) {
+			grid-template-columns: repeat(6, 1fr);
+		}
+        
+		&__logo {
+			width: 50px;
+			grid-column: 1/4 ;
+            @media only screen and (min-width: 1024px) {
+                grid-column: 1/1;
+            }
+		}
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			&__item {
+				font-size: 0.9rem;
+				font-weight: 700;
+                display: none;
+                &:first-child {
+                    display: block;
+                }
+                @media only screen and (min-width: 480px) {
+                    display: block;
+                }
+				a {
+					font-size: 0.8;
+					font-weight: 500;
+					color: black;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

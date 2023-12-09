@@ -10,6 +10,7 @@
     color: $white_color;
     position:sticky;
     top: 0;
+    z-index: 10;
     a {
         height: inherit;
         display: flex;
